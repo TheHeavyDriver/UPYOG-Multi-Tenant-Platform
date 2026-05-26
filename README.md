@@ -214,19 +214,4 @@ The AI assistant can answer questions like:
 - "Which city has the most pending properties?"
 - "Compare total registrations between Pune and Jaipur"
 
-## Scoring Breakdown
 
-| Task | Points | Status |
-|------|--------|--------|
-| Total Properties KPI | 7 | ✅ |
-| Approved Properties KPI | 7 | ✅ |
-| Rejected Properties KPI | 7 | ✅ |
-| Total Collection KPI | 9 | ✅ |
-| Tenant Filter (10 cities + All) | 15 | ✅ |
-| Comparison Chart | 10 | ✅ |
-| AI Chat Assistant | 25 | ✅ |
-| **Total** | **80** | **✅** |
-
-## License
-
-Internal use — UPYOG Multi-Tenant Platform / NUDM Intern Assessment 2026
