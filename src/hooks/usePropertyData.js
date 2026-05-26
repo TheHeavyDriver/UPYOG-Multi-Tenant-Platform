@@ -1,26 +1,34 @@
 import { useState, useEffect } from 'react'
-import propertiesData from '../properties.json'
 
-// Custom hook for loading and managing property data
 export const usePropertyData = () => {
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
   useEffect(() => {
+    let cancelled = false
+
     const loadData = async () => {
       try {
-        // Simulate brief loading for UX
-        await new Promise(resolve => setTimeout(resolve, 800))
-        setData(propertiesData)
-        setLoading(false)
+        const response = await fetch('/properties.json')
+        if (!response.ok) {
+          throw new Error(`Failed to load properties.json: ${response.status} ${response.statusText}`)
+        }
+        const propertiesData = await response.json()
+        if (!cancelled) {
+          setData(propertiesData)
+          setLoading(false)
+        }
       } catch (err) {
-        setError(err.message)
-        setLoading(false)
+        if (!cancelled) {
+          setError(err.message)
+          setLoading(false)
+        }
       }
     }
 
     loadData()
+    return () => { cancelled = true }
   }, [])
 
   return { data, loading, error }
