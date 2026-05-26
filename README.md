@@ -2,6 +2,8 @@
 
 A production-grade, multi-tenant Property Tax Analytics Dashboard built for the UPYOG platform serving 10 Indian cities. This dashboard provides real-time KPIs, interactive comparison charts, and an AI-powered chat assistant for querying property tax data.
 
+## Live Demo
+https://upyog-multi-tenant-platform-one.vercel.app/
 ## Features
 
 ### KPI Dashboard
@@ -165,8 +167,7 @@ Each record includes: property_id, tenant, owner_name, property_type, ward, area
 
 ## Deployment
 
-### Vercel (Recommended)
-
+### Vercel 
 ```bash
 npm install -g vercel
 vercel
