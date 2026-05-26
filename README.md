@@ -83,7 +83,7 @@ UPYOG-Multi-Tenant-Platform/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/upyog-property-tax-dashboard.git
+git clone https://github.com/TheHeavyDriver/upyog-property-tax-dashboard.git
 cd upyog-property-tax-dashboard
 ```
 
@@ -157,7 +157,7 @@ Each record includes: property_id, tenant, owner_name, property_type, ward, area
 
 ## Screenshots
 
-> *Add screenshots here after running the application*
+![Uploading image.png…]()
 
 - KPI Dashboard with tenant filter
 - Comparison charts (collection + status distribution)
